@@ -1,5 +1,9 @@
 # .NET
 
+## General
+
+- 'ctrl' + '.' will open quick fix menu, which is important if missing something to add it.
+
 ## Running the application
 
 We need to be in the API folder where the Program.cs file for our application is placed. When there run in the terminal:
@@ -16,6 +20,37 @@ If you are working with VS code you will need the following extensions:
 - **NuGet Package Manager** - for installing packages
 - **C# Extensions** - optional, but good to have
 - **SQLite** - for database, good to have
+
+## How to install additional packages
+
+- press F1 to open the command palette
+- access NuGet PM by typing *NuGetPackage Manager: Add Package*
+- type the name of the package you need
+
+### Installing Microsofot.EntityFrameworkCore
+
+- do the initial steps for installing package above in this file
+- the name of the package is **Microsoft.EntityFrameworkCore**
+- we need 3 packages from there:
+
+    - **Microsoft.EntityFrameworkCore** - it is very important on the next step to select the correct version of your .NET Core. And then select for which project you want to install it, in our case for Persistence.
+    - **Microsoft.EntityFrameworkCore.Sqlite** - it is very important on the next step to select the correct version of your .NET Core. And then select for which project you want to install it, in our case for Persistence.
+    - **Microsoft.EntityFrameworkCore.Design** - it is very important on the next step to select the correct version of your .NET Core. And then select for which project you want to install it, in our case for API.
+
+- if you see popup in VS Code click the *Restore* button. Or you can run in the terminal in the .sln level **dotnet restore**
+
+### Database and migrations
+
+For this application we need to install a tool with the following command. This is required for migration services.
+
+```bash
+dotnet tool install --global dotnet-ef
+```
+
+In the terminal, when on the root level (.sln file) type the following command. -s specify in which folder is the starting point of our app
+```bash
+dotnet ef migrations add InitialCreate -p Persistence -s API
+```
 
 ## Additional notes
 

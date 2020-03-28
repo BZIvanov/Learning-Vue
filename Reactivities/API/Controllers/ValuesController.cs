@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DatingApp.API.Controllers
+namespace API.Controllers
 {
     /* \\
         - for the route api/values the below class will called
