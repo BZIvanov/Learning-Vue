@@ -28,3 +28,4 @@ Contains information of how files are created and some info of what is mostly cu
     - **Program.cs** - auto-generated file, which is the starting point of our app
     - **Startup.cs** - auto-generated file, which holds some configurations
     - **WeatherForcast.cs** - auto-generated and manually deleted after that, because it is a demo file.
+    - **reactivities.db** - auto-generated file with the command *dotnet watch run*. It is our database related file
