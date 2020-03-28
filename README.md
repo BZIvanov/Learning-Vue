@@ -16,3 +16,9 @@ If you are working with VS code you will need the following extensions:
 - **NuGet Package Manager** - for installing packages
 - **C# Extensions** - optional, but good to have
 - **SQLite** - for database, good to have
+
+## Additional notes
+
+When working with the CLI, only creating class library is not enough, we also need to add the library to our solution file.
+
+
