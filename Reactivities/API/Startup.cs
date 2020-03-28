@@ -35,8 +35,8 @@ namespace API
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseHttpsRedirection();
+            // \\ we can comment out while developing to avoid https warning
+            // app.UseHttpsRedirection();
 
             app.UseRouting();
 
