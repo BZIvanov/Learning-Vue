@@ -6,9 +6,10 @@ Contains information of how files are created and some info of what is mostly cu
 
 - **Domain** folder and content - created using CLI command *dotnet new classlib -n Domain*.
 
+    - **bin** folder - all the content is auto-generated and we dont manually work in it
     - **obj** folder - all the content is auto-generated and we dont manually work in it
     - **Class1.cs** - blank template class on which we will work and rename if we want
-    - **Domain.csproj** - auto-generated content, this file is used for example when registering this class library in our .sln file.
+    - **Domain.csproj** - auto-generated content, this file is used for example when registering this class library in our .sln file. Also here will be added references to other .csproj files, when Domain project is depending on another project. IMPORTANT: for example if we have in the Domain reference to the Persistence, and then from the Application we have reference to the Domain, Application will also have indirect reference to the Persistence.
 
 - **Application** folder and content - see above for Domain, this folder follows the same pattern.
 

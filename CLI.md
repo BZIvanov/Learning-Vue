@@ -45,3 +45,22 @@ dotnet new classlib -n Domain
 ```bash
 dotnet new webapi -n API
 ```
+
+- the first command will display the options we have for our sln/solution file. The second command will add class library to our solution. We dont need to specify the full path, just the folder name which is in the current directory and the cli will then target the csproj file in it.
+
+```bash
+dotnet sln -h
+dotnet sln add  Domain/
+```
+
+- will display list of all our libraries we added to the solution
+
+```bash
+dotnet sln list
+```
+
+- will add reference from one class library to another. While we are in our *Application* class library we can add reference for our *Domain* class library. The result will be that in our *Application* library in the *Application.csproj* file we will get new tag ItemGroup in which the new reference is specified
+
+```bash
+dotnet add reference ../Domain/
+```
