@@ -1,10 +1,4 @@
 .vscode
-
-Reactivities/API/bin/*
-Reactivities/Application/bin/*
-Reactivities/Domain/bin/*
-Reactivities/Persistence/bin/*
-Reactivities/API/obj/*
-Reactivities/Application/obj/*
-Reactivities/Domain/obj/*
-Reactivities/Persistence/obj/*
+bin
+obj
+*.db
