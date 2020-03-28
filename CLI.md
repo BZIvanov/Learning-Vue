@@ -78,7 +78,7 @@ In the terminal, when on the root level (.sln file) type the following command. 
 dotnet ef migrations add InitialCreate -p Persistence -s API
 ```
 
-When in the API project run the following command to test migrations. This command only works inside the context of the startup project, we will get an error if we use it at the solution level, even with the -p switch. This command will generate our reactivities.db file
+When in the API project run the following command to test migrations. This command only works inside the context of the startup project, we will get an error if we use it at the solution level, even with the -p switch. This command will generate our reactivities.db file. This command will be also used to provide data from this API to the react app.
 ```bash
 dotnet watch run
 ```
