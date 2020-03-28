@@ -64,3 +64,27 @@ dotnet sln list
 ```bash
 dotnet add reference ../Domain/
 ```
+
+#### Database and migrations
+
+For this application we need to install a tool with the following command. This is required for migration services.
+
+```bash
+dotnet tool install --global dotnet-ef
+```
+
+In the terminal, when on the root level (.sln file) type the following command. -s specify in which folder is the starting point of our app
+```bash
+dotnet ef migrations add InitialCreate -p Persistence -s API
+```
+
+When in the API project run the following command to test migrations. This command only works inside the context of the startup project, we will get an error if we use it at the solution level, even with the -p switch. This command will generate our reactivities.db file
+```bash
+dotnet watch run
+```
+With our VS code extension SQLite we can open the database. Press F1 in vs code and run *SQLite: Open Database*. On the left panel you will now have Sqlite explorer. Select your Reactivities.db file and with right-click you can inspect the tables.
+
+For seeding data to the database, when on the .sln directory run below command. This will also create files in Persistence/Migrations and the file name will contain "SeedValues" as specified in the command:
+```bash
+dotnet ef migrations add SeedValues -p Persistence -s API
+```

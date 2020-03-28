@@ -39,19 +39,6 @@ If you are working with VS code you will need the following extensions:
 
 - if you see popup in VS Code click the *Restore* button. Or you can run in the terminal in the .sln level **dotnet restore**
 
-### Database and migrations
-
-For this application we need to install a tool with the following command. This is required for migration services.
-
-```bash
-dotnet tool install --global dotnet-ef
-```
-
-In the terminal, when on the root level (.sln file) type the following command. -s specify in which folder is the starting point of our app
-```bash
-dotnet ef migrations add InitialCreate -p Persistence -s API
-```
-
 ## Additional notes
 
 When working with the CLI, only creating class library is not enough, we also need to add the library to our solution file.
