@@ -1,5 +1,4 @@
-﻿using System;
-using Domain;
+﻿using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Persistence
@@ -15,6 +14,8 @@ namespace Persistence
 
         // Values is what will be used as db name inside sqlite
         public DbSet<Value> Values { get; set; }
+
+        public DbSet<Activity> Activities { get; set; }
 
         // here we will seed our database
         protected override void OnModelCreating(ModelBuilder builder)
