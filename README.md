@@ -39,6 +39,17 @@ If you are working with VS code you will need the following extensions:
 
 - if you see popup in VS Code click the *Restore* button. Or you can run in the terminal in the .sln level **dotnet restore**
 
+### Installing MediatR
+
+This package will help us with handling queries.
+
+- do the initial steps for installing package above in this file
+- select **MediatR.Extensions.Microsoft.DependencyInjection**
+- select latest version
+- install it for our Application project
+- click restore
+- if done correctly you should be able to see it in the Applications.csproj file as ItemGroup tag
+
 ## Additional notes
 
 When working with the CLI, only creating class library is not enough, we also need to add the library to our solution file.

@@ -84,7 +84,7 @@ dotnet watch run
 ```
 With our VS code extension SQLite we can open the database. Press F1 in vs code and run *SQLite: Open Database*. On the left panel you will now have Sqlite explorer. Select your Reactivities.db file and with right-click you can inspect the tables.
 
-For seeding data to the database, when on the .sln directory run below command. This will also create files in Persistence/Migrations and the file name will contain "SeedValues" as specified in the command:
+For seeding data to the database, when on the .sln directory run below command. This will also create files in Persistence/Migrations and the file name will contain "SeedValues" as specified in the command. We will run this command again everytime we are using DbSet to create new table.
 ```bash
 dotnet ef migrations add SeedValues -p Persistence -s API
 ```
