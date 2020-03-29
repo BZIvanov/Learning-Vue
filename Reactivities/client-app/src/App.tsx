@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
+import { Header, Icon, List } from 'semantic-ui-react';
 
 interface UserData {
   id: number;
@@ -21,8 +22,14 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="App">
-      {userData.map(user => <li key={user.id}>{user.name}</li>)}
+    <div>
+      <Header as='h2'>
+        <Icon name='users' />
+        <Header.Content>Reactivities</Header.Content>
+      </Header>
+      <List>
+        {userData.map(user => <List.Item key={user.id}>{user.name}</List.Item>)}
+      </List>
     </div>
   );
 }
