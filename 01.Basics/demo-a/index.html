@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Course Goals</h1>
+    </header>
+    <section id="user-goal">
+      <h2>My Course Goal</h2>
+      <code
+        >With double curly brackets we can output the value of our Vue
+        data.</code
+      >
+      <p>{{ firstGoal }}</p>
+
+      <code
+        >We can use double curly brackets only between html tags, for attributes
+        like href we need to use directive</code
+      >
+      <p>Learn more <a v-bind:href="docsLink" target="_blank">about Vue</a></p>
+
+      <code
+        >In the double curly brackets we can also use simple expressions or
+        execute functions.</code
+      >
+      <p>Is Vue good to learn? {{ outputGoal() }}</p>
+
+      <code
+        >If we want to inject text, which also contains html we can do it by
+        using directive.</code
+      >
+      <p v-html="someHtml"></p>
+    </section>
+  </body>
+</html>
