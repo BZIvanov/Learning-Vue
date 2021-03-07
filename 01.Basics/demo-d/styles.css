@@ -1,0 +1,28 @@
+header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.27);
+  margin: 1rem;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #4fc07d;
+  color: white;
+  text-align: center;
+}
+
+#styling {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.27);
+  margin: 2rem;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.demo {
+  width: calc(100% - 32px);
+  height: 80px;
+  margin: 16px;
+  border: 2px dashed;
+}
+
+.active {
+  background-color: aquamarine;
+}
