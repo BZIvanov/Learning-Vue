@@ -19,6 +19,10 @@ const app = Vue.createApp({
       console.log('prev', prevValue);
       console.log('new', newValue);
     },
+    // we can watch both data properties and computed properties
+    fullname() {
+      console.log('I can watch data properties and also computed properties');
+    },
   },
   methods: {
     add(num) {
