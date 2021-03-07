@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Events</h1>
+    </header>
+    <section id="events">
+      <h2>Events in Action</h2>
+      <div><code>Inline click function code</code></div>
+      <button v-on:click="counter++">Add</button>
+      <button v-on:click="counter = counter - 1">Remove</button>
+      <p>Result: {{ counter }}</p>
+
+      <hr />
+
+      <div><code>Click function code as method</code></div>
+      <!-- using function with curly brackets or without, both will work -->
+      <button v-on:click="add">Add</button>
+      <button v-on:click="remove()">Remove</button>
+      <p>Result: {{ counter }}</p>
+
+      <hr />
+
+      <input type="text" v-on:input="setFirstName" />
+      <!-- if we want to provide arguments and at the same time to keep the event as function argument, we need to prefix it with $ sign -->
+      <input type="text" v-on:focus="setLastName($event, 'Ivanov')" />
+      <p>Name: {{ firstName }} {{ lastName }}</p>
+
+      <hr />
+
+      <!-- after the event name we can type . and then some modifier. For different events we have different modifiers, for example for submit we have prevent which will preventDefault in vanilla js -->
+      <form v-on:submit.prevent="submitForm">
+        <input type="text" />
+        <button>Submit</button>
+      </form>
+    </section>
+  </body>
+</html>
