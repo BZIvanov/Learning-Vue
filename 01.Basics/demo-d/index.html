@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Dynamic Styling</h1>
+    </header>
+    <section id="styling">
+      <div
+        :class="first ? 'demo active' : 'demo'"
+        :style="{borderColor: first ? 'red' : 'blue'}"
+        @click="selectDiv('A')"
+      ></div>
+      <code>Below class binding result is alternative on the above</code>
+      <div
+        :class="{demo: true, active: second}"
+        :style="{borderColor: second ? 'red' : 'blue'}"
+        @click="selectDiv('B')"
+      ></div>
+      <div
+        class="demo"
+        :class="{active: third}"
+        :style="{borderColor: third ? 'red' : 'blue'}"
+        @click="selectDiv('C')"
+      ></div>
+    </section>
+  </body>
+</html>
