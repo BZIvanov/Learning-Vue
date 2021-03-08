@@ -25,3 +25,7 @@ And every next time, when creating new project run the following:
 ```
 vue create app-name-here
 ```
+
+## VSCode extension
+
+Search for extension called "Vetur" and install it so vs code can work well with vue files.
