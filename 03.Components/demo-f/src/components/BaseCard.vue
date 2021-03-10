@@ -2,6 +2,7 @@
   <div>
     <header v-if="$slots.header">
       <slot name="header">
+        <!-- the content between slot tags is default is none is provided -->
         <h2>Default Text</h2>
       </slot>
     </header>
