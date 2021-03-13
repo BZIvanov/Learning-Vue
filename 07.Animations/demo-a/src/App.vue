@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <!-- transition component will provide us with 6 specific classes, which we need to prefix with para, because that is the name we specified -->
+    <!-- if we don't provide name prop our css classes will follow the pattern v-enter-to instead of para-enter-to -->
     <transition name="para">
       <p v-if="paraIsVisible">Some random text displayed</p>
     </transition>
