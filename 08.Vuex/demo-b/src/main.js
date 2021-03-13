@@ -17,10 +17,19 @@ const store = createStore({
       state.counter = state.counter + payload.value;
     },
   },
+  actions: {
+    increment(context) {
+      setTimeout(function() {
+        context.commit('increment');
+      }, 1000);
+    },
+    increase(context, payload) {
+      // commit will call the selected mutation
+      context.commit('increase', payload);
+    },
+  },
   getters: {
-    // with getters parameter we can access other getters, for example to reuse logic
-    getCounter(state, getters) {
-      console.log(getters);
+    result(state) {
       return state.counter + ' %';
     },
   },
